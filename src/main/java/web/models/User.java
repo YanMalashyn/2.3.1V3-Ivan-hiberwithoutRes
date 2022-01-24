@@ -1,13 +1,13 @@
 package web.models;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+//import javax.validation.constraints.Email;
+//import javax.validation.constraints.Min;
+//import javax.validation.constraints.NotEmpty;
+//import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "user")
+@Table(name = "userIvan")
 public class User {
 
     @Id
@@ -15,26 +15,26 @@ public class User {
     private int id;
 
     @Column(name = "name", nullable = false, length = 45)
-    @NotEmpty(message = "Name should not be empty")
-    @Size(min = 2, max = 45, message = "Name should be between 2 and 45 characters")
+  //  @NotEmpty(message = "Name should not be empty")
+  //  @Size(min = 2, max = 45, message = "Name should be between 2 and 45 characters")
     private String name;
 
     @Column(name = "age")
-    @Min(value = 0, message = "Age should be greater than 0")
+ //   @Min(value = 0, message = "Age should be greater than 0")
     private int age;
 
     @Column(name = "email", nullable = false, length = 45)
-    @NotEmpty(message = "Email should not be empty")
-    @Email(message = "Email should be valid")
+  //  @NotEmpty(message = "Email should not be empty")
+  //  @Email(message = "Email should be valid")
     private String email;
 
     public User() {}
 
-    public User(String name, int age, String email) {
-        this.name = name;
-        this.age = age;
-        this.email = email;
-    }
+//    public User(String name, int age, String email) {
+//        this.name = name;
+//        this.age = age;
+//        this.email = email;
+//    }
 
     public int getId() {
         return id;
